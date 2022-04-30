@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --color-50: #f8fafc;
+    --color-100: #f1f5f9;
+    --color-200: #e2e8f0;
+    --color-300: #cbd5e1;
+    --color-400: #94a3b8;
+    --color-500: #64748b;
+    --color-600: #475569;
+    --color-700: #334155;
+    --color-800: #1e293b;
+    --color-900: #0f172a;
+    --xlarge: 2.5rem;
+    --large: 2rem;
+    --medium: 1.25rem;
+    --small: 1rem;
+    --xsmall: 0.75rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    background-color: var(--color-400);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: auto 5fr;
+    grid-template-rows: minmax(auto, 1.5fr) 6fr;
+    grid-gap: 8px 0;
+    grid-template-areas:
+    "side-panel header"
+    "side-panel content";
+}
+
+.header {
+    background-color: var(--color-100);
+    grid-area: header;
+}
+
+.side-panel {
+    background-color: var(--color-700);
+    grid-area: side-panel;
+    display: grid;
+    grid-template-rows: 1fr 4fr 3fr;
+    padding-right: min(64px, 5vw);
+}
+
+.content {
+    background-color: var(--color-400);
+    grid-area: content;
+}
+
+.logo {
+    color: var(--color-300);
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.links>li>a, .settings>li>a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 8px 24px;
+}
+
+.links>li:hover, .settings>li:hover {
+    transform: scale(1.05);
+}
+
+.settings {
+    margin-top: auto;
+}
+
+.links, .settings {
+    padding-left: 0px;
+}
+
+img[src$="-md.svg"]{
+    width: var(--medium);
+    height: var(--medium);
+}
+
+img[src$="-lrg.svg"]{
+    width: var(--xlarge);
+    height: var(--xlarge);
+}
+
+.shadow {
+    box-shadow: 0 0 10px var(--color-900);
+}
+
+.text-large {
+    font-size: var(--large);
+    font-weight: 900;
+}
+
+.text-medium {
+    font-size: var(--medium);
+    font-weight: 700;
+}
+
+.text-small {
+    font-size: var(--small);
+}
+
+.text-xsmall {
+    font-size: var(--xsmall);
+    font-weight: lighter;
+}
+
+li {
+    list-style: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: var(--color-300);
+}
