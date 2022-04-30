@@ -2,10 +2,6 @@ body {
     margin: 0;
 }
 
-html {
-    font-family: 'Roboto', sans-serif;
-}
-
 :root{
     --color-50: #f8fafc;
     --color-100: #f1f5f9;
@@ -22,6 +18,7 @@ html {
     --medium: 1.25rem;
     --small: 1rem;
     --xsmall: 0.75rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -53,6 +50,7 @@ html {
     display: grid;
     grid-template-rows: 1fr 4fr 3fr;
     padding-right: min(64px, 5vw);
+    padding-left: min(24px, 5vw);
 }
 
 .content {
@@ -66,7 +64,6 @@ html {
     gap: 8px;
     justify-content: center;
     align-items: center;
-    padding: 8px;
 }
 
 .links>li>a, .settings>li>a {
@@ -74,7 +71,7 @@ html {
     flex-direction: row;
     justify-content: flex-start;
     gap: 24px;
-    padding: 8px 24px;
+    padding: 8px 0;
 }
 
 .links>li:hover, .settings>li:hover {
@@ -86,7 +83,7 @@ html {
 }
 
 .links, .settings {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 img[src$="-md.svg"]{
