@@ -2,41 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="scripts.js" defer></script>
+    <script defer src="scripts.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="grid-container">
-            <div class="header shadow"></div>
-            <div class="side-panel">
-                <div class="logo">
-                    <img src="images/logo-lrg.svg" alt="">
-                    <div class="text-large">Dashboard</div>
-                </div>
-                <ul class="links">
-                    <li><a href="#" class="text-medium"><img src="images/home-md.svg" alt="">Home</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/account-md.svg" alt="">Profile</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/message-md.svg" alt="">Messages</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/history-md.svg" alt="">History</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/calendar-check-md.svg" alt="">Tasks</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/account-group-md.svg" alt="">Communities</a></li>
-                </ul>
-                <ul class="settings">
-                    <li><a href="#" class="text-medium"><img src="images/cog-outline-md.svg" alt="">Settings</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/help-circle-outline-md.svg" alt="">Support</a></li>
-                    <li><a href="#" class="text-medium"><img src="images/shield-lock-outline-md.svg" alt="">Privacy</a></li>
-                </ul>
+<div class="wrapper">
+    <div class="grid-container">
+        <div class="header shadow">
+            <div class="header-search">
+                <form action="">
+                    <img alt="Search" src="images/magnify-md.svg">
+                    <input class="header-search-input" name="search" placeholder="" type="text">
+                </form>
             </div>
-            <div class="content"></div>
+            <div class="header-profile"></div>
+            <div class="header-welcome"></div>
+            <div class="header-buttons"></div>
         </div>
+        <div class="side-panel">
+            <div class="side-logo">
+                <img alt="" src="images/logo-lrg.svg">
+                <div class="text-large">Dashboard</div>
+            </div>
+            <ul class="side-links">
+                <li><a class="text-medium" href="#"><img alt="Home Icon" src="images/home-md.svg">Home</a></li>
+                <li><a class="text-medium" href="#"><img alt="Profile Icon" src="images/account-md.svg">Profile</a></li>
+                <li><a class="text-medium" href="#"><img alt="Messages Icon" src="images/message-md.svg">Messages</a>
+                </li>
+                <li><a class="text-medium" href="#"><img alt="History Icon" src="images/history-md.svg">History</a></li>
+                <li><a class="text-medium" href="#"><img alt="Tasks Icon" src="images/calendar-check-md.svg">Tasks</a>
+                </li>
+                <li><a class="text-medium" href="#"><img alt="Communities Icon" src="images/account-group-md.svg">Communities</a>
+                </li>
+            </ul>
+            <ul class="side-settings">
+                <li><a class="text-medium" href="#"><img alt="Settings Icon"
+                                                         src="images/cog-outline-md.svg">Settings</a></li>
+                <li><a class="text-medium" href="#"><img alt="Support Icon" src="images/help-circle-outline-md.svg">Support</a>
+                </li>
+                <li><a class="text-medium" href="#"><img alt="Privary Icon" src="images/shield-lock-outline-md.svg">Privacy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content"></div>
     </div>
+</div>
 </body>
 </html>

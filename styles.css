@@ -42,6 +42,49 @@ body {
 .header {
     background-color: var(--color-100);
     grid-area: header;
+    display: grid;
+    gap: 8px;
+    padding: 4px;
+    grid-template-columns: 2fr 1.25fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "search-bar profile"
+    "welcome buttons";
+}
+
+.header-search {
+    grid-area: search-bar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.header-search-input {
+    width: 75%;
+    background-color: var(--color-300);
+    border-width: 0;
+    border-radius: 16px;
+    padding: 8px 8px;
+}
+
+.header-profile {
+    grid-area: profile;
+}
+
+.header-welcome {
+    grid-area: welcome;
+}
+
+.header-buttons {
+    grid-area: buttons;
 }
 
 .side-panel {
@@ -58,7 +101,7 @@ body {
     grid-area: content;
 }
 
-.logo {
+.side-logo {
     color: var(--color-300);
     display: flex;
     gap: 8px;
@@ -66,7 +109,7 @@ body {
     align-items: center;
 }
 
-.links>li>a, .settings>li>a {
+.side-links>li>a, .side-settings>li>a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -74,15 +117,15 @@ body {
     padding: 8px 0;
 }
 
-.links>li:hover, .settings>li:hover {
+.side-links>li:hover, .side-settings>li:hover {
     transform: scale(1.05);
 }
 
-.settings {
+.side-settings {
     margin-top: auto;
 }
 
-.links, .settings {
+.side-links, .side-settings {
     padding-left: 0;
 }
 
