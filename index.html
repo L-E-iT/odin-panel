@@ -16,15 +16,32 @@
 <div class="wrapper">
     <div class="grid-container">
         <div class="header shadow">
-            <div class="header-search">
-                <form action="">
+            <div class="header-search header-flex">
+                <form class="header-flex" action="">
                     <img alt="Search" src="images/magnify-md.svg">
                     <input class="header-search-input" name="search" placeholder="" type="text">
                 </form>
             </div>
-            <div class="header-profile"></div>
-            <div class="header-welcome"></div>
-            <div class="header-buttons"></div>
+            <div class="header-profile header-flex">
+                <img src="images/bell-ring-md.svg" alt="Notifications">
+                <img class="profile-picture" src="images/user-lrg.svg" alt="Profile">
+                <div class="text-small text-bold">John Williams</div>
+            </div>
+            <div class="header-welcome">
+                <div class="header-welcome-profile-picture">
+                    <img src="images/user-xlrg.svg" alt="">
+                </div>
+                <div class="header-welcome-text text-bold">
+                    <div class="text-xsmall">Hi there,</div>
+                    <div class="text-medium">John Williams (@JJWilly)</div>
+                </div>
+
+            </div>
+            <div class="header-buttons header-flex">
+                <button class="text-xsmall">New</button>
+                <button class="text-xsmall">Upload</button>
+                <button class="text-xsmall">Share</button>
+            </div>
         </div>
         <div class="side-panel">
             <div class="side-logo">

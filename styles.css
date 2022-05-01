@@ -13,6 +13,7 @@ body {
     --color-700: #334155;
     --color-800: #1e293b;
     --color-900: #0f172a;
+    --xxlarge: 3.5rem;
     --xlarge: 2.5rem;
     --large: 2rem;
     --medium: 1.25rem;
@@ -46,45 +47,82 @@ body {
     gap: 8px;
     padding: 4px;
     grid-template-columns: 2fr 1.25fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "search-bar profile"
     "welcome buttons";
 }
 
-.header-search {
-    grid-area: search-bar;
+.header-flex {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-search {
+    grid-area: search-bar;
 }
 
 .header-search form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 16px;
     width: 100%;
+    padding: 8px 8px;
 }
 
 .header-search-input {
-    width: 75%;
+    width: 85%;
     background-color: var(--color-300);
     border-width: 0;
     border-radius: 16px;
-    padding: 8px 8px;
+    padding: 4px 8px;
 }
 
 .header-profile {
     grid-area: profile;
+    gap: 24px;
+    padding: 0 12px;
+    margin-left: auto;
 }
 
 .header-welcome {
     grid-area: welcome;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+    "picture text"
+}
+
+.header-welcome-profile-picture {
+    grid-area: picture;
+    margin-left: auto;
+    padding: 8px;
+}
+
+.header-welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: text;
+    padding: 8px;
+    gap: 4px;
 }
 
 .header-buttons {
     grid-area: buttons;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.header-buttons button {
+    background-color: var(--color-700);
+    border-width: 0;
+    width: 88px;
+    height: 32px;
+    border-radius: 64px;
+    color: white;
 }
 
 .side-panel {
@@ -139,6 +177,18 @@ img[src$="-lrg.svg"]{
     height: var(--xlarge);
 }
 
+img[src="images/user-lrg.svg"]{
+    width: var(--xlarge);
+    height: var(--xlarge);
+    border-radius: 50%;
+}
+
+img[src="images/user-xlrg.svg"]{
+    width: var(--xxlarge);
+    height: var(--xxlarge);
+    border-radius: 50%;
+}
+
 .shadow {
     box-shadow: 0 0 10px var(--color-900);
 }
@@ -160,6 +210,10 @@ img[src$="-lrg.svg"]{
 .text-xsmall {
     font-size: var(--xsmall);
     font-weight: lighter;
+}
+
+.text-bold {
+    font-weight: 900;
 }
 
 li {
