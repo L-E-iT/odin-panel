@@ -45,55 +45,52 @@ body {
     grid-area: header;
     display: grid;
     gap: 8px;
-    padding: 4px;
-    grid-template-columns: 2fr 1.25fr;
+    padding: 4px 4px 4px 16px;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
-    "search-bar profile"
-    "welcome buttons";
+    "search-bar-profile"
+    "welcome-buttons";
 }
 
 .header-flex {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.header-search {
-    grid-area: search-bar;
+.header-top-row {
+    grid-area: search-bar-profile;
+    justify-content: space-between;
 }
 
-.header-search form {
-    gap: 16px;
-    width: 100%;
-    padding: 8px 8px;
+.header-bottom-row {
+    grid-area: welcome-buttons;
+    justify-content: space-around;
+}
+
+.header-search {
+    gap: 8px;
+    width: min(400px, 50%);
 }
 
 .header-search-input {
-    width: 85%;
     background-color: var(--color-300);
     border-width: 0;
     border-radius: 16px;
     padding: 4px 8px;
+    width: 90%;
 }
 
 .header-profile {
-    grid-area: profile;
     gap: 24px;
     padding: 0 12px;
-    margin-left: auto;
+    align-self: flex-end;
 }
 
 .header-welcome {
-    grid-area: welcome;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas:
-    "picture text"
+    display: flex;
 }
 
 .header-welcome-profile-picture {
-    grid-area: picture;
     margin-left: auto;
     padding: 8px;
 }
@@ -113,7 +110,7 @@ body {
     align-items: center;
     gap: 16px;
     padding: 16px;
-    flex-wrap: wrap;
+    margin-left: auto;
 }
 
 .header-buttons button {
@@ -224,15 +221,10 @@ img[src$="-md.svg"]{
 img[src$="-lrg.svg"]{
     width: var(--xlarge);
     height: var(--xlarge);
-}
-
-img[src="images/user-lrg.svg"]{
-    width: var(--xlarge);
-    height: var(--xlarge);
     border-radius: 50%;
 }
 
-img[src="images/user-xlrg.svg"]{
+img[src$="-xlrg.svg"]{
     width: var(--xxlarge);
     height: var(--xxlarge);
     border-radius: 50%;
