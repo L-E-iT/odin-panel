@@ -45,7 +45,7 @@ body {
     grid-area: header;
     display: grid;
     gap: 8px;
-    padding: 4px 4px 4px 16px;
+    padding: 8px 32px;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "search-bar-profile"
@@ -82,17 +82,17 @@ body {
 
 .header-profile {
     gap: 24px;
-    padding: 0 12px;
     align-self: flex-end;
+    padding-right: 16px;
 }
 
 .header-welcome {
     display: flex;
+    gap: 16px;
 }
 
 .header-welcome-profile-picture {
     margin-left: auto;
-    padding: 8px;
 }
 
 .header-welcome-text {
@@ -100,7 +100,6 @@ body {
     flex-direction: column;
     justify-content: center;
     grid-area: text;
-    padding: 8px;
     gap: 4px;
 }
 
@@ -109,7 +108,6 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 16px;
-    padding: 16px;
     margin-left: auto;
 }
 
@@ -137,7 +135,7 @@ body {
     display: grid;
     padding: 16px;
     gap: 16px;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 3.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "projects announcements"
@@ -164,6 +162,15 @@ body {
     gap: 8px;
 }
 
+.content-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
 .content-trending-container, .content-announcements-container {
     background-color: var(--color-100);
     display: grid;
@@ -175,14 +182,14 @@ body {
 
 .border-bottom {
     border-bottom: 1px solid var(--color-300);
+}
+
+.content-announcements-container > .content-flex {
     padding: 8px 0;
 }
 
 .content-trending-container {
-    display: grid;
-    row-gap: 24px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fill, 1fr);
+
 }
 
 .side-logo {
@@ -199,10 +206,6 @@ body {
     justify-content: flex-start;
     gap: 24px;
     padding: 8px 0;
-}
-
-.side-links>li:hover, .side-settings>li:hover {
-    transform: scale(1.05);
 }
 
 .side-settings {
@@ -262,6 +265,21 @@ li {
 }
 
 li > a {
-    text-decoration: none;
     color: var(--color-300);
+}
+
+a {
+    text-decoration: none;
+}
+
+li > a:visited {
+    color: var(--color-300);
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    transform: scale(1.05);
 }
