@@ -28,7 +28,7 @@ body {
 }
 
 .grid-container {
-    background-color: var(--color-400);
+    background-color: var(--color-300);
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -135,8 +135,57 @@ body {
 }
 
 .content {
-    background-color: var(--color-400);
+    background-color: var(--color-300);
     grid-area: content;
+    display: grid;
+    padding: 16px;
+    gap: 16px;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.content-projects {
+    grid-area: projects;
+}
+
+.content-announcements {
+    grid-area: announcements;
+}
+
+.content-trending {
+    grid-area: trending;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.content-trending-container, .content-announcements-container {
+    background-color: var(--color-100);
+    display: grid;
+    margin-bottom: auto;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    border-radius: 16px;
+    padding: 12px 24px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--color-300);
+    padding: 8px 0;
+}
+
+.content-trending-container {
+    display: grid;
+    row-gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
 }
 
 .side-logo {
@@ -190,17 +239,17 @@ img[src="images/user-xlrg.svg"]{
 }
 
 .shadow {
-    box-shadow: 0 0 10px var(--color-900);
+    box-shadow: 2px 2px 4px var(--color-400);
 }
 
 .text-large {
     font-size: var(--large);
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .text-medium {
     font-size: var(--medium);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .text-small {
@@ -209,11 +258,11 @@ img[src="images/user-xlrg.svg"]{
 
 .text-xsmall {
     font-size: var(--xsmall);
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 .text-bold {
-    font-weight: 900;
+    font-weight: 500;
 }
 
 li {
