@@ -134,8 +134,9 @@ body {
     grid-area: content;
     display: grid;
     padding: 16px;
-    gap: 16px;
-    grid-template-columns: 3.5fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+    grid-template-columns: 3.5fr 300px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "projects announcements"
@@ -169,6 +170,10 @@ body {
     gap: 16px;
     padding: 8px;
     flex: 0 0 auto;
+}
+
+.content-announcements, .content-trending {
+    gap: 8px;
 }
 
 .content-trending-container, .content-announcements-container {
